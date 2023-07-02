@@ -265,13 +265,14 @@ public class LetterSideBar extends View {
 
         mCirclePath.reset();
         mCirclePath.addCircle(mCircleCenterX, mCenterY, mCircleRadius, Path.Direction.CW);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            mCirclePath.op(mWavePath, Path.Op.DIFFERENCE);
-        }
+        mCirclePath.op(mWavePath, Path.Op.DIFFERENCE);
 
         mCirclePath.close();
         canvas.drawPath(mCirclePath, mWavePaint);
+
     }
+
+
 
     private void startAnimator(float value) {
         if (mRatioAnimator == null) {

@@ -2,12 +2,13 @@ package com.drying.addressbook;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.drying.addressbook.utils.PinyinComparator;
 import com.drying.addressbook.utils.PinyinUtils;
@@ -20,10 +21,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Activity                activity;
-    private RecyclerView            recyclerView;
+    private RecyclerView recyclerView;
     private LetterSideBar           waveSideBar;
     private List<AddressBookItemMo> list;
-    private LinearLayoutManager     manager;
+    private LinearLayoutManager manager;
     private MyRecyclerAdapter       adapter;
     String[] nameArray = {"张三", "李四", "王五", "赵六", "123", "哈哈哈", "adf", "@阿道夫",
             "这阿道夫", "%a啊f", "法尔", "dfd", "啊哥哥", "ccc", "43", "daa", "啊实打实", "会看人看", "从VB从", "就愿意叫", "一放假"
